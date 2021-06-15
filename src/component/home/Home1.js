@@ -1,6 +1,5 @@
 import '../CSS/home1.css';
-
-
+import styled from 'styled-components'
 
 function Home1() {
   return (

@@ -17,9 +17,9 @@ function AboutUs1() {
           <Discription>fjslfnslfjns fjslfnslfjxcvxvxcvxcvxcns fjslfnslfjxcvxvxcvxcvxcns</Discription>
         </Box>
       </AboutUsBox>
-      <div className="AboutUs-main AboutUs-Box">
-        <div className="Name gradient-text">About Us</div>
-      </div>
+      <Logo>
+        <div>About Us</div>
+      </Logo>
       <AboutUsBox>
         <Box>
           <Image src={help_child_img} alt="image" />
@@ -89,4 +89,23 @@ const Image = styled.img`
     :hover{
       transform:scale(1.02);
     }
+`
+
+const Logo = styled.div`
+  color: white;
+  font-size: 100px;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  & > div{
+      background-color: red;
+      background-image: linear-gradient(to right top, #000000, #15080e, #200f1a, #281428, #2d1a38, #2d2546, #2a3154, #243d60, #2c4d66, #3e5c69, #56696e, #6f7676);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+  }
 `
