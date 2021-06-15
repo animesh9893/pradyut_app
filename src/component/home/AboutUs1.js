@@ -1,36 +1,31 @@
-import '../CSS/aboutUs1.css';
 import styled from 'styled-components'
-import help_child_img from '../IMG/help_child.jpg';
-
+import {AboutUs1Left,AboutUs1Right} from './context';
 function AboutUs1() {
+
+
+
   return (
     <AboutUs>
       <AboutUsBox>
-        <Box>
-          <Image src={help_child_img} alt="image" />
-          <Heading>We are helping Childeren</Heading>
-          <Discription>fjslfnslfjns fjslfnslfjxcvxvxcvxcvxcns fjslfnslfjxcvxvxcvxcvxcns</Discription>
-        </Box>
-        <Box>
-          <Image src={help_child_img} alt="image" />
-          <Heading>We are helping Childeren</Heading>
-          <Discription>fjslfnslfjns fjslfnslfjxcvxvxcvxcvxcns fjslfnslfjxcvxvxcvxcvxcns</Discription>
-        </Box>
+          {AboutUs1Left.map((obj,index)=>(
+            <Box>
+              <Image src={obj.url} alt="image" />
+              <Heading>{obj.heading}</Heading>
+              <Discription>{obj.description}</Discription>
+            </Box>
+          ))}
       </AboutUsBox>
       <Logo>
         <div>About Us</div>
       </Logo>
       <AboutUsBox>
-        <Box>
-          <Image src={help_child_img} alt="image" />
-          <Heading>We are helping Childeren</Heading>
-          <Discription>fjslfnslfjns fjslfnslfjxcvxvxcvxcvxcns fjslfnslfjxcvxvxcvxcvxcns</Discription>
-        </Box>
-        <Box>
-          <Image src={help_child_img} alt="image" />
-          <Heading>We are helping Childeren</Heading>
-          <Discription>fjslfnslfjns fjslfnslfjxcvxvxcvxcvxcns fjslfnslfjxcvxvxcvxcvxcns</Discription>
-        </Box>
+          {AboutUs1Right.map((obj,index)=>(
+            <Box>
+              <Image src={obj.url} alt="image" />
+              <Heading>{obj.heading}</Heading>
+              <Discription>{obj.description}</Discription>
+            </Box>
+          ))}
       </AboutUsBox>
     </AboutUs>
   );
@@ -75,9 +70,11 @@ const Box = styled.div`
   transition:0.4s;
   display:flex;
   flex-direction:column;
+  overflow:hidden;
   justify-content:space-between;
   :hover{
     transform:scale(1.02);
+    overflow:auto;
   }
 `
 
@@ -107,5 +104,10 @@ const Logo = styled.div`
       -webkit-text-fill-color: transparent; 
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
+      transition:0.7s;
+      :hover{
+        transform:scale(1.2);
+      }
   }
+  
 `
