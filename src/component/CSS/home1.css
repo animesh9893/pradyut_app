@@ -1,13 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Bungee);
-/**{
-	background-color: #f7fbff;
 
-}*/
-
-.Main{
-
-}
 
 .Home{
 	width: auto;
@@ -50,28 +43,3 @@
   -moz-text-fill-color: transparent;
 }
 
-
-.Home2{
-	width: auto;
-	height: 100vh;
-}
-
-.AboutUs{
-	color: white;
-	font-size: 100px;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
-
-.AboutUsBox{
-	z-index: 1;
-	position: absolute;
-}
-
-.zindex{
-	z-index: 1;
-	position: absolute;
-}
